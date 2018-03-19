@@ -1,0 +1,6 @@
+dependencies:
+  - name: shinydiffdom
+    version: 0.0.1
+    src: htmlwidgets/lib/diffDOM
+    script: 
+      - diffDOM.js
