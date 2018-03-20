@@ -21,7 +21,13 @@ diffUIOutput <- function(outputId, width = "auto", height = "auto") {
   shinyWidgetOutput(outputId, "diffUI", width, height, package = "shinydiffdom")
 }
 #' @export
-renderDiffUI <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force 
+renderDiffUIHW <- function(expr, env = parent.frame()) {
   shinyRenderWidget(expr, diffUIOutput, env, quoted = TRUE)
+}
+
+#' @export
+renderDiffUI <- function(expr, env = parent.frame(), quoted = FALSE) { 
+  if (!quoted) { expr <- substitute(expr) } # force 
+  expr <- call("diffUI",expr)
+  renderDiffUIHW(expr, env)
 }

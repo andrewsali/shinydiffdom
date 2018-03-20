@@ -3,4 +3,5 @@
 export(diffUI)
 export(diffUIOutput)
 export(renderDiffUI)
+export(renderDiffUIHW)
 import(htmlwidgets)

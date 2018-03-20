@@ -46,13 +46,11 @@ server <- function(input, output, session) {
   }) 
   
   output$test <- renderDiffUI({
-    diffUI(
       HTML(
         sprintf('<h3>%s</h3><iframe width="420" height="315"
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>',input$bins)
       )
-    )
   })
 }
 
