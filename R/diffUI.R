@@ -1,7 +1,6 @@
 #' @import htmlwidgets
 #' @export
 diffUI <- function(.html ,width="auto", height="auto") {
-  print(.html)
   # pass the data and settings using 'x'
   x <- list(
     html=
